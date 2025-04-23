@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Vegan store</title>
     <style>
      .navbar
@@ -12,7 +14,7 @@
      }
      .left-section
      {
-      width:60px;
+      max-width:60px;
       height:60px;
       margin-left:20px;
      }
@@ -25,8 +27,9 @@
       height: 30px;
       align-items: center;
       justify-content: space-between;
-      width:500px;
-      margin-right:10px;
+      max-width:700px;
+      margin-right:20px;
+      gap:20px;
      }
      .buynow
      {
@@ -79,7 +82,7 @@
     padding-bottom:100px;
   }
   .step p{
-    width:300px;
+    max-width:300px;
     text-align: center;
     
   }
@@ -287,7 +290,7 @@
  
   display:flex;
   width:80%;
-  justify-content: center;
+  gap:30px;
   margin:0 auto;
   
 }
@@ -297,11 +300,10 @@
   display: flex;
   flex-direction: column;
   width:50%;
-  align-items: flex-start;
+  max-width:420px;
+  margin:0 auto;
   margin-bottom:150px;
-  text-align: center;
-
-  padding-left: 200px;
+ 
   
 }
 .inputbox
@@ -321,10 +323,88 @@
 }
 body{
   position: relative;
+  margin:0;
+  
+}
+
+@media (max-width:413px) {
+  .step-section
+  {
+  
+    grid-template-columns: auto;
+ 
+  }
+  .right-section .dropdown ,.right-section p
+  {
+    display:none;
+  }
+  
+  
+  .landing-section h3
+  {
+    font-size:25px;   
+    letter-spacing: 10px;   
+    top:15%;
+    left:0%;
+   
+  }
+  .landing-section p
+  {
+   font-size: 18px;
+  
+   left:0%;
+   top:30%;
+
+  }
+  .testimonial-section h3
+  {
+    text-align: center;
+  }
+.store-features, .testimonials-list,.follow-us
+{
+  flex-direction: column;
+}
+.reviews-stack
+{
+  flex-direction: column;
+}
+.Video video{
+  width:350px;
+}
+.contact-us
+{
+  flex-direction: column;
+  width:100%;
+}
+.follow-us-image-content ,.strawberry-img-container {
+  width: 100%;
+
+}
+.strawberry-img-container img {
+  height:auto;
+  object-fit: cover;
+
+}
+
+
+.content{
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.follow-us-image-content
+{
+  height:500px;
+}
+footer {
+  right:0px;
+}
+
 }
     </style>
   </head>
   <body>
+  
     <div class="navbar">
       <div class="left-section">
         <img src="Images/broccoli-512.webp"/>
@@ -555,7 +635,7 @@ body{
           <div class="overlay-followus-content">
             <div class="content">
               <h1>Follow us</h1>
-              <p style="width:300px;">A wide range of products: many unusual and tasty products, courteous staff.</p>
+              <p style="max-width:300px;">A wide range of products: many unusual and tasty products, courteous staff.</p>
               <h4>Your Email</h4>
               <button style="color:white; background-color:red; padding:16px 20px; border:none; cursor:pointer;border-radius: 8px;">
                 Subscribe
@@ -588,20 +668,20 @@ body{
         title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
         gyroscope; picture-in-picture; web-share"
          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
-         <video src="Images/20221210_201830.mp4" width="700px" controls></video>
+         <video src="Images/20221210_201830.mp4"width="700px" controls></video>
       </div>
       <div class="contact-us">
         <div class="address-info">
           <h5 style="color:rgba(67, 133, 19, 0.438)"><i>Contact Us</i></h5>
           <h1>Address Information</h1>
-          <p style="width:420px;text-align: left;color:grey">Overeating is one of the most common causes of overweight and digestive problem</p>
+          <p style="max-width:420px;text-align: left;color:grey">Overeating is one of the most common causes of overweight and digestive problem</p>
           <h3>London Store</h3>
-          <p style="width:200px;text-align: left;color:grey">Roeterseiland Campus Building 
+          <p style="max-width:200px;text-align: left;color:grey">Roeterseiland Campus Building 
            6th floor London
            Monday to Friday:9am to 8pm
            examplemail.mail.com</p>
           <h3>Berlin Store</h3>
-          <p style="width:200px;text-align: left;color:grey">Roeterseiland Campus Building 
+          <p style="max-width:200px;text-align: left;color:grey">Roeterseiland Campus Building 
             6th floor London
             Monday to Friday:9am to 8pm
             examplemail.mail.com</p>
@@ -609,7 +689,7 @@ body{
         <div class="get-in-touch">
           <h5 style="color:rgba(67, 133, 19, 0.438)"><i>Meet Our Team</i></h5>
           <h1>Get In Touch</h1>
-          <p style="width:420px;text-align: left;color:grey">The task of proper nutrition-to remove from the diet harmful food and enrich it useful.</p>
+          <p style="max-width:420px;text-align: left;color:grey">The task of proper nutrition-to remove from the diet harmful food and enrich it useful.</p>
           <form class="inputform">
             <input class="inputbox" type="text" placeholder="Name"/>
             <input class="inputbox"  type="text" placeholder="Phone"/>
@@ -620,7 +700,7 @@ body{
           </form>
         </div>
       </div>
-      <footer style="background-color: black;color:white;text-align: center;box-sizing:border-box;padding:32px;height:90px;position: absolute;bottom:-10px;right:-20px;left:-20px;">
+      <footer style="background-color: black;color:white;text-align: center;box-sizing:border-box;padding:32px;height:90px;position: absolute;bottom:-10px;right:-10px;left:-20px;">
         Copyright 2018 Mobirise-All Rights Reserved
       </footer>
   </body>
